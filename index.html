@@ -1,0 +1,23 @@
+<html>
+<body>
+<script>
+var svgHolder = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svgHolder.setAttribute("height",500);
+svgHolder.setAttribute("width",700);
+document.body.appendChild(svgHolder);
+
+for(var i = 0; i < 10; i++)
+{
+  var circles = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  circles.setAttribute("id", "c"+i)
+  circles.setAttribute("cx", (i+1)*50)
+  circles.setAttribute("cy", 100)
+  circles.setAttribute("r", (i+1)*10)
+  circles.setAttribute("stroke", "black")
+  circles.setAttribute("stroke-width", "3")
+  circles.setAttribute("fill", "red");
+  svgHolder.appendChild(circles);
+}
+</script>
+</body>
+</html>
